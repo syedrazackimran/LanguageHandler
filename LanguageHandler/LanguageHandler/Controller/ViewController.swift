@@ -23,6 +23,7 @@ class ViewController: RootBaseViewController {
 
     override func applicationLanguageChangeNotification() {
          Lbl_Example.text = ImranLocalizedString(key: "hello_world", comment: "")
+        Btn_Change.setTitle(ImranLocalizedString(key: "chng_lng", comment: ""), for: .normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,11 +32,11 @@ class ViewController: RootBaseViewController {
     }
 
     @IBAction func ChangeAction(_ sender: UIButton) {
-        let locationAlert = UIAlertController(title: "Change Language", message: "Run time change App language !!!", preferredStyle: .actionSheet)
+        let locationAlert = UIAlertController(title: ImranLocalizedString(key: "chng_lng", comment: ""), message: ImranLocalizedString(key: "action_message", comment: ""), preferredStyle: .actionSheet)
         
         for i in ArrayLanguage
         {
-            let LanguageName = UIAlertAction(title: i as String , style: .`default`) {  action -> Void in
+            let LanguageName = UIAlertAction(title: ImranLocalizedString(key: i as String, comment: "") , style: .`default`) {  action -> Void in
                 if let alertIndex = locationAlert.actions.index(of: action) {
                     switch (alertIndex)
                     {
@@ -64,7 +65,7 @@ class ViewController: RootBaseViewController {
             locationAlert.addAction(LanguageName)
             
         }
-        let dismissAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let dismissAction = UIAlertAction(title: ImranLocalizedString(key: "Cancel", comment: ""), style: .cancel) { (action) in
             locationAlert.dismiss(animated: true, completion: nil)
         }
         locationAlert.addAction(dismissAction)

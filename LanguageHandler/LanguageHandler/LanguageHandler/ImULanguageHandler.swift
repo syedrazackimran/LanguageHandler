@@ -9,26 +9,26 @@
 import Foundation
 
 // MARK: - Notification
-public let ApplicationLanguageDidChangeNotification: String = "ImranApplicationLanguageDidChangeNotification"
+public let ApplicationLanguageDidChangeNotification = "ImranApplicationLanguageDidChangeNotification"
 
 // MARK: - Constants
 
-let EnglishUSLanguageShortName: String = "en"
-let KhmerLanguageShortName: String = "km"
-let FrenchLanguageShortName: String = "fr"
-let JapaneseLanguageShortName: String = "ja"
-let KoreanLanguageShortName: String = "ko"
-let SpanishLanguageShortName: String = "es"
-let TamilLanguageShortName: String = "ta"
+let EnglishUSLanguageShortName = "en"
+let KhmerLanguageShortName = "km"
+let FrenchLanguageShortName = "fr"
+let JapaneseLanguageShortName = "ja"
+let KoreanLanguageShortName = "ko"
+let SpanishLanguageShortName = "es"
+let TamilLanguageShortName = "ta"
 
 
-let EnglishUSLanguageLongName: String = "English(US)"
-let KhmerLanguageLongName: String = "Khmer"
-let FrenchLanguageLongName: String = "French"
-let JapaneseLanguageLongName: String = "Japanese"
-let KoreanLanguageLongName: String = "Korean"
-let SpanishLanguageLongName: String = "Spanish"
-let TamilLanguageLongName: String = "Tamil"
+let EnglishUSLanguageLongName = "English(US)"
+let KhmerLanguageLongName = "Khmer"
+let FrenchLanguageLongName = "French"
+let JapaneseLanguageLongName = "Japanese"
+let KoreanLanguageLongName = "Korean"
+let SpanishLanguageLongName = "Spanish"
+let TamilLanguageLongName = "Tamil"
 
 var _languagesLong : Any?  = nil
 
@@ -77,13 +77,27 @@ func applicationLanguageLong() -> String{
 }
 
 func shortLanguageToLong(shortLanguage:String) -> String {
-    if shortLanguage == EnglishUSLanguageShortName {
+    switch shortLanguage {
+    case EnglishUSLanguageShortName:
         return EnglishUSLanguageLongName
-    }else if  shortLanguage == KhmerLanguageShortName {
-        return KhmerLanguageLongName
-    }
-    else{
-        return ""
+        
+    case KhmerLanguageShortName :
+          return KhmerLanguageLongName
+        
+    case FrenchLanguageShortName :
+        return FrenchLanguageLongName
+        
+    case JapaneseLanguageShortName :
+        return JapaneseLanguageLongName
+        
+    case SpanishLanguageShortName :
+        return SpanishLanguageLongName
+        
+    case TamilLanguageShortName :
+        return TamilLanguageLongName
+        
+    default:
+        return EnglishUSLanguageLongName
     }
 }
 

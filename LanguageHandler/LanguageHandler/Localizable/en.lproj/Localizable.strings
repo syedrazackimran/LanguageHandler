@@ -6,3 +6,13 @@
   Copyright © 2017 2ntkh. All rights reserved.
 */
 "hello_world"="Hello World !!!";
+"chng_lng"="Change Language";
+"Tamil"="Tamil";
+"English"="English";
+"Khmer"="Khmer";
+"French"="French";
+"Japanese"="Japanese";
+"Korean"="Korean";
+"Spanish"="Spanish";
+"action_message"="Run time change App language !!!";
+"Cancel"="Cancel";

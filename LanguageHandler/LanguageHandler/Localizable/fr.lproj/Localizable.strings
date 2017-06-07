@@ -6,3 +6,13 @@
   Copyright © 2017 2ntkh. All rights reserved.
 */
 "hello_world"="Bonjour le monde !!!";
+"chng_lng"="Changer de langue";
+"Tamil"="Tamil";
+"English"="Anglais";
+"Khmer"="Khmer";
+"French"="français";
+"Japanese"="Japonais";
+"Korean"="coréen";
+"Spanish"="Espanol";
+"action_message"="Changement d'heure Modifier la langue de l'application !!!";
+"Cancel"="Annuler";
